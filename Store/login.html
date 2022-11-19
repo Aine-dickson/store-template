@@ -1,0 +1,45 @@
+<div class="forms">
+    <div class="login-form flex flex-col items-center">
+        <form class="login-page m-auto border rounded shadow-md w-72 p-2 mt-10 flex flex-col items-center bg-slate-200">
+            <fieldset class="my-2 w-full flex flex-col items-center">
+                <label for="full-name">User-name or email address</label>
+                <input type="text" id="full-name" class="border rounded ml-2 p-1 shadow-inner border-blue-300 w-full">
+            </fieldset>
+            <fieldset class="my-2 w-full flex flex-col items-center">
+                <label for="password">
+                    <span class="mr-16">Password</span>
+                    <span class="text-blue-500 underline">Forgot password?</span>
+                </label>
+                <input type="password" id="password" class="border rounded ml-2 p-1 shadow-inner border-blue-300 w-full">
+            </fieldset>
+            <button type="submit" id="full-name" class="rounded bg-blue-600 w-3/4 text-white">Login</button>
+        </form>
+        <div class="no-acc w-72 border-2 mt-10 p-4 rounded flex justify-center space-x-2">
+            <span>New to Store?</span>
+            <span class="underline text-blue-500">Create account</span>
+        </div>
+    </div>
+    <div class="sign-up mt-10 w-72 m-auto hidden">
+        <form class="flex flex-col items-center space-y-4">
+            <fieldset class="flex flex-col w-5/6">
+                <label for="email">Enter email</label>
+                <input type="email" id="email" class="border border-green-600">
+            </fieldset>
+            <fieldset class="flex flex-col w-full items-center space-y-4">
+                <div class="flex flex-col w-5/6">
+                    <label for="password">Create a password</label>
+                    <input type="password" id="password" class="border border-green-600">
+                </div>
+                <div class="flex flex-col w-5/6">
+                    <label for="c-password">Confirm a password</label>
+                    <input type="password" id="c-password" class="border border-green-600">
+                </div>
+            </fieldset>
+            <fieldset class="flex flex-col w-5/6">
+                <label for="name">Enter user-name</label>
+                <input type="text" id="name" class="border border-green-600">
+            </fieldset>
+            <button type="submit" class="border-2 border-green-600 rounded w-full">Create Account</button>
+        </form>
+    </div>
+</div>
