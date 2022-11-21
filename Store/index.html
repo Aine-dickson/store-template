@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +7,131 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    
+<body class="h-full">
+    <div class="basic-home h-full">
+        <div class="overlay bg-white fixed top-0 left-0 bottom-0 right-0 z-20 hidden">
+            <header class="overlay-header flex justify-between items-center p-2 text-xl font-bold bg-blue-300 rounded-bl-2xl rounded-br-2xl">
+                <span class="text-2xl"><ion-icon name="arrow-round-back"></ion-icon></span>
+                <span class="section-title capitalize"></span>
+                <span></span>
+            </header>
+            <main class="overlay-main relative">
+                <div class="this-item relative hidden">
+                    <div class="item h-5/6 min-w-[85%] max-w-[85%] m-auto rounded-lg overflow-hidden mt-4 shadow-xl shadow-gray-500">
+                        <img src="./Assets/oleg-ivanov-sg_gRhbYXhc-unsplash.jpg" alt="" class="object-fill h-full w-full">
+                    </div>
+                    <div class="desc text-lg text-white font-bold absolute right-0 bottom-1 w-1/2 border border-white bg-gray-500 bg-opacity-60">
+                        <span class="ml-1">Item desc</span>
+                        <div class="ml-1">
+                            <span>Size</span>
+                            <div class="flex space-x-2 font-normal overflow-auto">
+                                <span class="bg-gray-400 px-1 rounded-lg">xs</span>
+                                <span class="bg-gray-400 px-1 rounded-lg">sm</span>
+                                <span class="bg-gray-400 px-1 rounded-lg">md</span>
+                                <span class="bg-gray-400 px-1 rounded-lg">lg</span>
+                                <span class="bg-gray-400 px-1 rounded-lg">xl</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-evenly items-center p-1">
+                            <input type="text" placeholder="Enter color" class="rounded border-2 border-blue-500 w-3/4 text-blue-700">
+                            <div class="color-preview w-4 h-4 bg-red-700 rounded-full"></div>
+                        </div>
+                        <div class="flex justify-between mt-2">
+                            <div></div>
+                            <div class="bg-blue-700 flex flex-col w-1/2 border border-white text-center rounded-tl-3xl shadow-[0_0_0.5rem_black]">
+                                <span class="promo">25% off</span>
+                                <span>@ only <br> $10</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="overlay-footer fixed bottom-0 left-0 right-0 flex justify-between items-center p-2">
+                <span class="text-4xl text-blue-700"><ion-icon name="cart"></ion-icon></span>
+                <button class="bg-blue-700 p-2 rounded-lg font-semibold text-lg text-white">Order Now!</button>
+                <span class="text-4xl text-blue-700"><ion-icon name="heart"></ion-icon></span>
+            </footer>
+        </div>
+        <header class="home-header fixed top-0 left-0 right-0 z-5 p-2 text-lg font-bold flex justify-between items-center bg-blue-300 rounded-bl-2xl rounded-br-2xl">
+            <span id="menu" class="text-2xl"><ion-icon name="menu"></ion-icon></span>
+            <span>Title & Logo</span>
+            <div class="tab">
+                <span id="notifications" class="border-2 border-blue-700 bg-white rounded-full p-2 flex justify-center text-2xl">
+                    <ion-icon name="Notifications"></ion-icon>
+                </span>
+            </div>
+        </header>
+        <nav class="h-full fixed right-0 top-0 left-0 bottom-0 z-10 hidden opacity-80">
+            <div class="menu-overlay fixed right-0 top-0 left-0 bottom-0 bg-gray-500 opacity-80"></div>
+            <div class="h-full relative z-2 bg-black text-white text-2xl w-1/2 p-1">
+                <section id="profile" class="flex space-x-2 text-lg items-center">
+                    <div class="profile-photo h-16 w-16 rounded-full overflow-hidden">
+                        <img src="./Assets/blank-profile.webp" alt="profile-photo" class="object-fill h-full w-full">
+                    </div>
+                    <div class="flex flex-col">
+                        <span>?</span>
+                        <span class="text-sm text-slate-300">?</span>
+                    </div>
+                </section>
+                <section class="menu-items">
+                    <div id="reviews" class="flex items-center my-2 p-1">
+                        <span><ion-icon name="paper"></ion-icon></span>
+                        <span class="ml-2">Reviews</span>
+                    </div>
+                    <div id="contacts" class="flex items-center my-2 p-1">
+                        <span><ion-icon name="call"></ion-icon></span>
+                        <span class="ml-2">Contacts</span>
+                    </div>
+                    <div id="settings" class="flex items-center my-2 p-1">
+                        <span><ion-icon name="settings"></ion-icon></span>
+                        <span class="ml-2">Settings</span>
+                    </div>
+                    <div id="about" class="flex items-center my-2 p-1">
+                        <span><ion-icon name="ribbon"></ion-icon></span>
+                        <span class="ml-2">About</span>
+                    </div>
+                </section>
+                <section class="ad-space">
+                    <!-- Advert space -->
+                </section>
+                <section class="logging absolute bottom-4 left-0 right-0">
+                    <div id="login" class="flex items-center p-1">
+                        <span><ion-icon name="log-in"></ion-icon></span>
+                        <span class="ml-2">Log-in</span>
+                    </div>
+                    <div id="logout" class="hidden flex items-center p-1">
+                        <span><ion-icon name="log-out"></ion-icon></span>
+                        <span class="ml-2">Log-out</span>
+                    </div>
+                </section>
+            </div>
+        </nav>
+        <main class="main-display h-full mt-16">
+            <!-- Content dynamically loaded here -->
+        </main>
+        <footer class="home-footer fixed bottom-0 left-0 right-0 z-5 p-2 flex justify-between mx-2 my-1 bg-blue-300 bg-opacity-80 border-2 border-blue-500 rounded-full">
+            <div class="tab flex flex-col">
+                <span id="cart" class="border-2 border-blue-700 bg-white rounded-full p-1 flex justify-center text-2xl">
+                    <ion-icon name="cart"></ion-icon>
+                </span>
+                <span class="hidden">Cart</span>
+            </div>
+            <div class="tab flex flex-col">
+                <span id="home" class="border-2 border-blue-700 bg-white rounded-full p-1 flex justify-center text-2xl">
+                    <ion-icon name="home"></ion-icon>
+                </span>
+                <span class="hidden">Home</span>
+            </div>
+            <div class="tab flex flex-col">
+                <span id="favorites" class="border-2 border-blue-700 bg-white rounded-full p-1 flex justify-center text-2xl">
+                    <ion-icon name="heart"></ion-icon>
+                </span>
+                <span class="hidden">Favs</span>
+            </div>
+        </footer>
+    </div>
+    <script src="./scripts/jquery-3.6.1.js"></script>
+    <script src="./scripts/index.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
 </html>
