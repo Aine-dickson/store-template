@@ -19,6 +19,8 @@ $(document).ready(() => {
         $(".menu-overlay").click(() => {
             $("nav").addClass("hidden")
         })
+
+        // Menu behavior control
         $(".menu-items > div").each((index, menuItem) => {
             $(menuItem).click(() => {
                 $(menuItem).attr("id")
@@ -69,17 +71,30 @@ function pageLoader(){
                             $.get(`./pages/login.html`,
                             (data) => {
                                 if(statusId == "login"){
-                                    menuId = statusId
-                                    $(".overlay-main").html(data)
                                     overlayRunner("signIn")
+                                    if($(".login-screen").hasClass("hidden")){
+
+                                    } else {
+                                        menuId = statusId
+                                        let login_page = document.createElement("div")
+                                        login_page.setAttribute("class", "login-screen")
+                                        login_page.innerHTML = data
+                                        $(".overlay-main").prepend(login_page)
+                                    }
+
+                                    // Create account
                                     $("#sign-up").click(() => {
                                         $(".login-form").addClass("hidden")
                                         $(".sign-up").toggleClass("hidden")
                                     })
+                                    $(".overlay-header > span:first-child").click(() => {
+                                        $(".login-screen").addClass("hidden")
+                                    })
+                                    
                                 } else {
-                                    console.log("loged out")
+                                    console.log("logged out")
                                 }
-                            $("nav").addClass("hidden")
+                                $("nav").addClass("hidden")
                             }
                         )
                         })
