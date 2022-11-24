@@ -1,3 +1,34 @@
 <div class="cart-screen">
-    <span>You have no items in cart yet</span>
+    <span class="text-red-700 font-[caveat] text-xl ml-2 font-bold">You have no items in cart!</span>
+    <div class="">
+        <section>
+            <div class="flex justify-around my-2">
+                <button id="order-all" class="p-2 text-white bg-blue-700 rounded-md w-24 text-lg">Order All</button>
+                <button id="delete-all" class="p-2 text-white bg-blue-700 rounded-md w-24 text-lg">Delete All</button>
+            </div>
+            <hr class="border-2">
+        </section>
+        <section class="articles h-96 overflow-auto">
+            <article class="cart-item flex space-x-2 rounded-lg shadow-[0_0_0.3rem_gray] m-2">
+                <div class="image h-24 w-24 p-1">
+                    <img src="../Assets/oleg-ivanov-sg_gRhbYXhc-unsplash.jpg" alt="" class="object-fill h-full w-full">
+                </div>
+                <div class="info">
+                    <div class="desc">
+                        <span class="font-semibold">Name</span>
+                        <div class="flex w-full text-lg font-semibold space-x-4">
+                            <span class="line-through"><strike>Price</strike></span>
+                            <span class="">C-price</span>
+                            <span class="">%off</span>
+                        </div>
+                    </div>
+                    <div class="actions flex items-center space-x-4 mt-2">
+                        <button class="text-white bg-blue-700 rounded-md p-1">Buy Now</button>
+                        <span class="text-2xl"><ion-icon name="heart"></ion-icon></span>
+                        <span class="text-2xl"><ion-icon name="trash"></ion-icon></span>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
 </div>
